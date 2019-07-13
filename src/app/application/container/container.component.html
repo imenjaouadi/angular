@@ -1,0 +1,138 @@
+<div style="border: 1px solid green;margin: 15px;">
+ 
+        <div class="container">
+     
+           <div class="col-md-6">
+              <div>
+                <div class="form-group">
+                    <label>Nom & Prénom</label>
+                    <input class="form-control" [(ngModel)]="nom">
+                    <span *ngIf="nom == '' || nom == undefined" style="color:red">Nom obligatoire *</span>
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input class="form-control" [(ngModel)]="email">
+                    <span *ngIf="!verify()" style="color:red">Email obligatoire *</span>
+                  
+
+                </div>
+                <div class="form-group">
+                    <label>Phone</label>
+                    <input class="form-control" [(ngModel)]="phone">
+                </div>
+                <div class="form-group">
+                    <label>About</label>
+                    <input class="form-control" [(ngModel)]="about">
+                </div>
+                <br>
+                <button  (click)="callfnctdelete()" class="btn btn-danger" >
+                    Annuler
+                  </button>
+                  <button  style="margin-left: 150pt" (click)="save()" class="btn btn-primary" >
+                      Valider
+                    </button>
+                  </div>
+                  <hr>
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                      </tr>
+                      <tr>
+                        <th>Search</th>
+                        <th><input class="for-control" [(ngModel)]="item"></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let h of HEROES |search:item"[ngClass]="{red:h.id=='1',
+                    black:h.id=='2',yellow:h.id=='5'}">
+                        <td>{{h.id}}</td>
+                        <td>{{h.name}}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <hr>
+                  <div>
+                      <div class="form-group">
+                          <label>Nom & Prénom</label>
+                          <input class="form-control" [(ngModel)]="nom">
+                         
+                      </div>
+                      <div class="form-group">
+                          <label>Email</label>
+                          <input class="form-control" [(ngModel)]="email">
+                          
+                        
+      
+                      </div>
+                      <div class="form-group">
+                          <label>Phone</label>
+                          <input class="form-control" [(ngModel)]="phone">
+                      </div>
+                      <button  style="margin-left: 100pt" (click)="validateuser()" class="btn btn-primary" >
+                          Valider
+                        </button>
+                        <table class="table">
+                            <thead>
+                              <tr>
+                                <th>Nom & Prénom</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                              </tr>
+                              <tr>
+                                <th>Search</th>
+                                <th><input class="for-control" [(ngModel)]="item"></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr *ngFor="let h of user">
+                                <td>{{h.nom}}</td>
+                                <td>{{h.email}}</td>
+                                <td>{{h.phone}}</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                  </div>
+     
+            <h1>{{test}}</h1>
+            <input value="{{test}}">
+            <input [value]="test">
+           <br>
+            <br>
+            <img src="{{img}}" width="700" height="400">
+            <br>
+            <br>
+            
+            <button  (click)="callfnctvalid()" class="btn btn-success" >
+              click!!!
+            </button>
+      
+            <button style="margin-left: 5pt" (click)="callfnctplus()" class="btn btn-primary" >
+                +
+              </button>
+              
+              <input style="margin-left: 5pt" value="{{compteur}}">
+    
+              <button  style="margin-left: 5pt" (click)="callfnctmoins()" class="btn btn-danger" >
+                  -
+                </button>
+     <hr>
+     <input class="form-control" [(ngModel)]="test">
+            <p>Normal Size</p>
+     
+            <p>
+     
+              <button type="button" class="btn btn-primary">container demo</button>
+     
+              <button type="button" class="btn btn-danger">container demo</button>
+     
+              <button type="button" class="btn btn-warning">container demo</button>
+     
+            </p>
+     
+           </div>
+     
+      </div>
+     
+        

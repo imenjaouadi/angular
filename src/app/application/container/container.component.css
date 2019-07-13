@@ -1,0 +1,15 @@
+.container{
+    width: 60%
+}
+.red{
+    background: red;
+    color: white;
+}
+.black{
+    background: black;
+    color:white;
+}
+.yellow{
+    background: yellow;
+    color:black
+}
